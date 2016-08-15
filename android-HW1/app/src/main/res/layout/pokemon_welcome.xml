@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/imageView"
+        android:layout_weight="0.5"
+        android:src="@drawable/pokemon" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="請輸入你的個人資訊"
+            android:id="@+id/info_text"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/name_editText"
+            android:layout_below="@+id/info_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:hint="請輸入你的名字" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_editText"
+            android:layout_marginTop="20dp"
+            android:id="@+id/option_radioGrp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/charmander_thumbnail"
+                android:id="@+id/option1"
+                android:checked="true"
+                android:drawablePadding="-20dp"
+                android:layout_alignTop="@+id/option_radioGrp"
+                android:layout_toLeftOf="@+id/confirm_btn"
+                android:layout_toStartOf="@+id/confirm_btn" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/squirtle_thumbnail"
+                android:id="@+id/option2"
+                android:nestedScrollingEnabled="false"
+                android:drawablePadding="-20dp"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/bulbasaur_thumbnail"
+                android:drawablePadding="-20dp"
+                android:id="@+id/option3" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="確認"
+            android:id="@+id/confirm_btn"
+            android:layout_below="@+id/option_radioGrp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hide"
+            android:id="@+id/checkBox"
+            android:checked="false"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_alignTop="@+id/name_editText"
+            android:layout_alignRight="@+id/option_radioGrp"
+            android:layout_alignEnd="@+id/option_radioGrp" />
+
+    </RelativeLayout>
+</LinearLayout>
